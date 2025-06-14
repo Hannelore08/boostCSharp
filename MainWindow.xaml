@@ -1,0 +1,43 @@
+﻿<Window x:Class="Crud_Personne.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CRUD Personne" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Formulaire -->
+        <GroupBox Header="Formulaire d'inscription" Grid.Column="0" Margin="10">
+            <StackPanel Margin="10">
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="Nom :" Width="80"/>
+                    <TextBox x:Name="txtNom" Width="150"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="Prenoms :" Width="80"/>
+                    <TextBox x:Name="txtPrenoms" Width="150"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="Âge :" Width="80"/>
+                    <TextBox x:Name="txtAge" Width="150"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="Num. Tel :" Width="80"/>
+                    <TextBox x:Name="txtTel" Width="150"/>
+                </StackPanel>
+
+                <Button x:Name="btnEnregistrer" Content="Enregistrer" Margin="0 10" Width="100" Click="btnEnregistrer_Click"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Table et actions -->
+        <GroupBox Header="Liste des personnes" Grid.Column="1" Margin="10">
+            <DataGrid x:Name="dataGridPersonnes" AutoGenerateColumns="False" CanUserAddRows="False" Margin="10"/>
+        </GroupBox>
+    </Grid>
+</Window>
